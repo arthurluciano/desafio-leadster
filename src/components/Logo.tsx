@@ -10,8 +10,8 @@ export function Logo() {
     >
       <defs>
         <linearGradient x1="0%" y1="49.9994351%" x2="99.9994544%" y2="49.9994351%" id="linearGradient-1">
-          <stop stop-color="#2E84FC" offset="0%" />
-          <stop stop-color="#035DDB" offset="100%" />
+          <stop stopColor="#2E84FC" offset="0%" />
+          <stop stopColor="#035DDB" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="0.000862448732%"
@@ -20,8 +20,8 @@ export function Logo() {
           y2="50.0013559%"
           id="linearGradient-2"
         >
-          <stop stop-color="#00E1FF" offset="0%" />
-          <stop stop-color="#00B8FF" offset="100%" />
+          <stop stopColor="#00E1FF" offset="0%" />
+          <stop stopColor="#00B8FF" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="-0.0101560444%"
@@ -30,8 +30,8 @@ export function Logo() {
           y2="50.0041464%"
           id="linearGradient-3"
         >
-          <stop stop-color="#00E1FF" offset="0%" />
-          <stop stop-color="#00B8FF" offset="100%" />
+          <stop stopColor="#00E1FF" offset="0%" />
+          <stop stopColor="#00B8FF" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="0.00345293486%"
@@ -40,8 +40,8 @@ export function Logo() {
           y2="50.0062763%"
           id="linearGradient-4"
         >
-          <stop stop-color="#00E1FF" offset="0%" />
-          <stop stop-color="#00B8FF" offset="100%" />
+          <stop stopColor="#00E1FF" offset="0%" />
+          <stop stopColor="#00B8FF" offset="100%" />
         </linearGradient>
       </defs>
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
