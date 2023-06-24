@@ -16,6 +16,11 @@ export const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.background};
   }
 
+  ::selection {
+      color: ${theme.colors.white};
+      background: ${theme.colors.green500}
+  }
+
   input, textarea, select {
     font-size: '1rem'
   }
