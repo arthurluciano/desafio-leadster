@@ -1,5 +1,6 @@
 import media from '@/mock/media.json'
-import { useState } from 'react'
+import { usePagination } from '@mantine/hooks'
+import { useEffect, useState } from 'react'
 
 import { Separator } from '../Separator'
 import { MediaVideosFilter } from './MediaVideosFilter'
@@ -10,6 +11,9 @@ import {
   MediaTabsContentNotFoundMessage,
   MediaTabsList,
   MediaTabsListAlign,
+  MediaTabsPage,
+  MediaTabsPageText,
+  MediaTabsPagesContainer,
   MediaTabsRoot,
   MediaTabsTrigger,
   MediaVideo,
@@ -45,9 +49,17 @@ export function MediaTabs() {
     ? actions[filter](media.videos.filter(video => video.category === selectedCategory))
     : media.videos.filter(video => video.category === selectedCategory)
 
+  const maxPages = Math.ceil(filteredVideos.length / 9)
+
+  const pagination = usePagination({ total: maxPages, initialPage: 1 })
+
   function handleSelectCategory(category: string) {
     setSelectedCategory(category)
   }
+
+  useEffect(() => {
+    pagination.setPage(1)
+  }, [selectedCategory])
 
   return (
     <MediaTabsContainer>
@@ -65,7 +77,7 @@ export function MediaTabs() {
             ))}
           </MediaTabsListAlign>
 
-          <MediaVideosFilter onSelect={option => setFilter(option.value as keyof typeof actions)} />
+          <MediaVideosFilter onSelect={option => setFilter(option.value as FilterActions)} />
         </MediaTabsList>
 
         <Separator height="0.126rem" />
@@ -81,25 +93,46 @@ export function MediaTabs() {
         {filteredVideos.length !== 0 &&
           media.categories.map((category, index) => (
             <MediaTabsContent key={`content-${category.value}-${index}`} value={category.value}>
-              {filteredVideos.map((video, index) => (
-                <MediaVideo
-                  key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`}
-                  tabIndex={index}
-                >
-                  <MediaVideoThumbnail thumbnail={video.thumbnail}>
-                    <MediaVideoThumbnailOverlay>
-                      <MediaVideoPlay weight="fill" size={72} />
-                    </MediaVideoThumbnailOverlay>
-                  </MediaVideoThumbnail>
-                  <MediaVideoTitle>
-                    {video.title} ({video.publishedAt})
-                  </MediaVideoTitle>
-                </MediaVideo>
-              ))}
+              {filteredVideos
+                .slice((pagination.active - 1) * 9, pagination.active * 9)
+                .map((video, index) => (
+                  <MediaVideo
+                    key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`}
+                    tabIndex={index}
+                  >
+                    <MediaVideoThumbnail thumbnail={video.thumbnail}>
+                      <MediaVideoThumbnailOverlay>
+                        <MediaVideoPlay weight="fill" size={72} />
+                      </MediaVideoThumbnailOverlay>
+                    </MediaVideoThumbnail>
+                    <MediaVideoTitle>
+                      {video.title} ({video.publishedAt})
+                    </MediaVideoTitle>
+                  </MediaVideo>
+                ))}
             </MediaTabsContent>
           ))}
 
         <Separator height="0.126rem" />
+
+        <MediaTabsPagesContainer>
+          <MediaTabsPageText>Página</MediaTabsPageText>
+
+          {pagination.range.map((page, index) => {
+            if (page === 'dots') return '...'
+
+            return (
+              <MediaTabsPage
+                type="button"
+                key={`page-${index}`}
+                selected={pagination.active === page}
+                onClick={() => pagination.setPage(page)}
+              >
+                {page}
+              </MediaTabsPage>
+            )
+          })}
+        </MediaTabsPagesContainer>
       </MediaTabsRoot>
     </MediaTabsContainer>
   )

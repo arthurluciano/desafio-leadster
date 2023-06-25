@@ -1,6 +1,6 @@
 import { Play } from '@phosphor-icons/react'
 import * as RadixTabs from '@radix-ui/react-tabs'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const MediaTabsContainer = styled.div`
   display: flex;
@@ -161,4 +161,55 @@ export const MediaVideoTitle = styled.div`
   color: ${props => props.theme.colors.gray500};
 
   padding: 1.5rem 1.5rem;
+`
+
+export const MediaTabsPagesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 1rem;
+`
+
+export const MediaTabsPageText = styled.strong`
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: ${props => props.theme.colors.gray500};
+`
+
+export const MediaTabsPage = styled.button<{ selected?: boolean }>`
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: ${props => props.theme.colors.gray500};
+
+  border: 1px solid transparent;
+
+  height: 2rem;
+  min-width: 2rem;
+
+  background: transparent;
+
+  border-radius: 0.25rem;
+
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.1s all ease-in-out;
+
+  &:hover {
+    background: ${props => props.theme.colors['brand-lighter']};
+    color: ${props => props.theme.colors['brand-mid']};
+  }
+
+  ${props =>
+    props.selected &&
+    css`
+      color: ${props => props.theme.colors['brand-mid']};
+      border: 1px solid ${props => props.theme.colors['brand-mid']};
+    `}
 `
