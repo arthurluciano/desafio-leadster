@@ -50,6 +50,8 @@ export const MediaTabsTrigger = styled(RadixTabs.Trigger)`
 
   padding: 0.35rem 0.875rem;
 
+  user-select: none;
+
   transition: 0.1s all ease-in-out;
 
   &:hover {
@@ -77,6 +79,26 @@ export const MediaTabsContent = styled(RadixTabs.Content)`
   &[data-state='inactive'] {
     display: none;
   }
+`
+
+export const MediaTabsContentNotFound = styled.div`
+  height: 12rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const MediaTabsContentNotFoundMessage = styled.strong`
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: ${props => props.theme.colors.gray500};
+
+  text-align: center;
+
+  max-width: 24rem;
 `
 
 export const MediaVideoThumbnailOverlay = styled.div`

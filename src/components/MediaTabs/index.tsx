@@ -6,6 +6,8 @@ import { MediaVideosFilter } from './MediaVideosFilter'
 import {
   MediaTabsContainer,
   MediaTabsContent,
+  MediaTabsContentNotFound,
+  MediaTabsContentNotFoundMessage,
   MediaTabsList,
   MediaTabsListAlign,
   MediaTabsRoot,
@@ -68,22 +70,34 @@ export function MediaTabs() {
 
         <Separator height="0.126rem" />
 
-        {media.categories.map((category, index) => (
-          <MediaTabsContent key={`content-${category.value}-${index}`} value={category.value}>
-            {filteredVideos.map((video, index) => (
-              <MediaVideo key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`} tabIndex={index}>
-                <MediaVideoThumbnail thumbnail={video.thumbnail}>
-                  <MediaVideoThumbnailOverlay>
-                    <MediaVideoPlay weight="fill" size={72} />
-                  </MediaVideoThumbnailOverlay>
-                </MediaVideoThumbnail>
-                <MediaVideoTitle>
-                  {video.title} ({video.publishedAt})
-                </MediaVideoTitle>
-              </MediaVideo>
-            ))}
-          </MediaTabsContent>
-        ))}
+        {filteredVideos.length === 0 && (
+          <MediaTabsContentNotFound>
+            <MediaTabsContentNotFoundMessage>
+              Ops! Parece que não existe nenhum vídeo publicado nessa categoria.
+            </MediaTabsContentNotFoundMessage>
+          </MediaTabsContentNotFound>
+        )}
+
+        {filteredVideos.length !== 0 &&
+          media.categories.map((category, index) => (
+            <MediaTabsContent key={`content-${category.value}-${index}`} value={category.value}>
+              {filteredVideos.map((video, index) => (
+                <MediaVideo
+                  key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`}
+                  tabIndex={index}
+                >
+                  <MediaVideoThumbnail thumbnail={video.thumbnail}>
+                    <MediaVideoThumbnailOverlay>
+                      <MediaVideoPlay weight="fill" size={72} />
+                    </MediaVideoThumbnailOverlay>
+                  </MediaVideoThumbnail>
+                  <MediaVideoTitle>
+                    {video.title} ({video.publishedAt})
+                  </MediaVideoTitle>
+                </MediaVideo>
+              ))}
+            </MediaTabsContent>
+          ))}
 
         <Separator height="0.126rem" />
       </MediaTabsRoot>

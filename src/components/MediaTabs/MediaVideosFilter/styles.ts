@@ -34,6 +34,8 @@ export const MediaVideosFilterPanel = styled.button`
 
   padding: 0.35rem 0.875rem;
 
+  user-select: none;
+
   column-gap: 0.5rem;
 
   svg {

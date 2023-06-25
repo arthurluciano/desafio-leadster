@@ -21,4 +21,6 @@ export const ExclusiveBadgeLabel = styled.span`
   color: ${props => props.theme.colors['brand-mid']};
 
   text-transform: uppercase;
+
+  user-select: none;
 `
