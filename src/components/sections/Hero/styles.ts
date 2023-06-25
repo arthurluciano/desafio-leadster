@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.section`
   width: 100%;
 
   height: 32.5rem;

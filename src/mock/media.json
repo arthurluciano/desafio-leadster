@@ -1,0 +1,156 @@
+{
+  "categories": [
+    {
+      "label": "Agências",
+      "value": "agencias"
+    },
+    {
+      "label": "Chatbot",
+      "value": "chatbot"
+    },
+    {
+      "label": "Marketing Digital",
+      "value": "marketing-digital"
+    },
+    {
+      "label": "Geração de Leads",
+      "value": "geracao-de-leads"
+    },
+    {
+      "label": "Mídia Paga",
+      "value": "midia-paga"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "agencias",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    },
+    {
+      "title": "Como aumentar sua Geração de Leads feat. Traktor",
+      "thumbnail": "/thumbnail.png",
+      "description": "",
+      "url": "/",
+      "category": "chatbot",
+      "downloads": [
+        {
+          "filename": "Spreadsheet",
+          "extension": "xls"
+        }
+      ]
+    }
+  ]
+}
