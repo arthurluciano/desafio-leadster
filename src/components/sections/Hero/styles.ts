@@ -9,7 +9,7 @@ export const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
 
-  background: ${props => props.theme.colors['brand-lighter']};
+  background: ${props => props.theme.colors.brand050};
 `
 
 export const HeroContent = styled.div`
@@ -74,7 +74,7 @@ export const HeroContentChangeGameContainer = styled.div`
   font-size: 0.875rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   > strong {
     font-weight: 800;

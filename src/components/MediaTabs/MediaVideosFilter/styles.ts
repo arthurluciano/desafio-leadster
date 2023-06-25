@@ -12,19 +12,19 @@ export const MediaVideosFilterLabel = styled.label`
   font-size: 0.875rem;
   font-weight: 700;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 `
 
 export const MediaVideosFilterPanel = styled.button`
   background: transparent;
 
-  border: 1px solid ${props => props.theme.colors.gray500};
+  border: 1px solid ${props => props.theme.colors.zinc500};
   border-radius: 1rem;
 
   font-size: 0.875rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ export const MediaVideosFilterContent = styled(RadixDropdown.Content)<{ width: n
 
   min-width: 12rem;
 
-  border: 1px solid ${props => props.theme.colors.gray500};
+  border: 1px solid ${props => props.theme.colors.zinc500};
   border-radius: 1rem;
 
   overflow: hidden;
@@ -83,12 +83,12 @@ export const MediaVideosFilterItem = styled(RadixDropdown.Item)<{ selected?: boo
   outline: none;
 
   &:hover {
-    background: ${props => props.theme.colors['brand-lighter']};
+    background: ${props => props.theme.colors.brand050};
   }
 
   ${props =>
     props.selected &&
     css`
-      background: ${props => props.theme.colors['brand-lighter']};
+      background: ${props => props.theme.colors.brand050};
     `}
 `

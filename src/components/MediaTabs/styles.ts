@@ -36,13 +36,13 @@ export const MediaTabsListAlign = styled.div`
 export const MediaTabsTrigger = styled(RadixTabs.Trigger)`
   background: transparent;
 
-  border: 1px solid ${props => props.theme.colors.gray500};
+  border: 1px solid ${props => props.theme.colors.zinc500};
   border-radius: 1rem;
 
   font-size: 0.875rem;
   font-weight: 500;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   display: flex;
   align-items: center;
@@ -55,13 +55,13 @@ export const MediaTabsTrigger = styled(RadixTabs.Trigger)`
   transition: 0.1s all ease-in-out;
 
   &:hover {
-    border: 1px solid ${props => props.theme.colors['brand-mid']};
-    color: ${props => props.theme.colors['brand-mid']};
+    border: 1px solid ${props => props.theme.colors.brand500};
+    color: ${props => props.theme.colors.brand500};
   }
 
   &[data-state='active'] {
-    background: ${props => props.theme.colors['brand-mid']};
-    border: 1px solid ${props => props.theme.colors['brand-mid']};
+    background: ${props => props.theme.colors.brand500};
+    border: 1px solid ${props => props.theme.colors.brand500};
     color: ${props => props.theme.colors.white};
   }
 `
@@ -94,7 +94,7 @@ export const MediaTabsContentNotFoundMessage = styled.strong`
   font-size: 1.5rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   text-align: center;
 
@@ -103,7 +103,7 @@ export const MediaTabsContentNotFoundMessage = styled.strong`
 
 export const MediaVideoThumbnailOverlay = styled.div`
   position: absolute;
-  background: ${props => props.theme.colors['brand-mid'] + '4D'};
+  background: ${props => props.theme.colors.brand500 + '4D'};
 
   height: 12.75rem;
   width: 100%;
@@ -144,8 +144,6 @@ export const MediaVideoThumbnail = styled.div<{ thumbnail: string }>`
   width: 100%;
 
   position: relative;
-
-  z-index: 1;
 `
 
 export const MediaVideoPlay = styled(Play)`
@@ -158,7 +156,7 @@ export const MediaVideoTitle = styled.div`
   font-size: 1rem;
   font-weight: 700;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   padding: 1.5rem 1.5rem;
 `
@@ -175,14 +173,14 @@ export const MediaTabsPageText = styled.strong`
   font-size: 1rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 `
 
 export const MediaTabsPage = styled.button<{ selected?: boolean }>`
   font-size: 1rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.gray500};
+  color: ${props => props.theme.colors.zinc500};
 
   border: 1px solid transparent;
 
@@ -202,14 +200,14 @@ export const MediaTabsPage = styled.button<{ selected?: boolean }>`
   transition: 0.1s all ease-in-out;
 
   &:hover {
-    background: ${props => props.theme.colors['brand-lighter']};
-    color: ${props => props.theme.colors['brand-mid']};
+    background: ${props => props.theme.colors.brand050};
+    color: ${props => props.theme.colors.brand500};
   }
 
   ${props =>
     props.selected &&
     css`
-      color: ${props => props.theme.colors['brand-mid']};
-      border: 1px solid ${props => props.theme.colors['brand-mid']};
+      color: ${props => props.theme.colors.brand500};
+      border: 1px solid ${props => props.theme.colors.brand500};
     `}
 `

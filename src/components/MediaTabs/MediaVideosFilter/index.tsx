@@ -61,7 +61,7 @@ export function MediaVideosFilter({ onSelect }: MediaVideosFilterProps) {
         <MediaVideosFilterLabel>Ordenar por</MediaVideosFilterLabel>
         <RadixDropdown.Trigger asChild>
           <MediaVideosFilterPanel ref={selectRef}>
-            {selected.label} <CaretDown size={14} weight="fill" color={theme.colors.gray500} />
+            {selected.label} <CaretDown size={14} weight="fill" color={theme.colors.zinc500} />
           </MediaVideosFilterPanel>
         </RadixDropdown.Trigger>
       </MediaVideosFilterTriggerContainer>

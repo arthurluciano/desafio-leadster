@@ -1,8 +1,10 @@
+import { Video } from '@/lib/entities/video'
 import media from '@/mock/media.json'
 import { usePagination } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
 
 import { Separator } from '../Separator'
+import { MediaVideoDialog } from './MediaVideoDialog'
 import { MediaVideosFilter } from './MediaVideosFilter'
 import {
   MediaTabsContainer,
@@ -43,6 +45,8 @@ type FilterActions = keyof typeof actions
 export function MediaTabs() {
   const [selectedCategory, setSelectedCategory] = useState<string>(media.categories[0].value)
 
+  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null)
+
   const [filter, setFilter] = useState<FilterActions>('latest')
 
   const filteredVideos = actions[filter]
@@ -57,12 +61,18 @@ export function MediaTabs() {
     setSelectedCategory(category)
   }
 
+  function handleCloseDialog() {
+    setSelectedVideo(null)
+  }
+
   useEffect(() => {
     pagination.setPage(1)
   }, [selectedCategory])
 
   return (
     <MediaTabsContainer>
+      <MediaVideoDialog video={selectedVideo} handleCloseDialog={handleCloseDialog} />
+
       <MediaTabsRoot defaultValue={selectedCategory}>
         <MediaTabsList aria-label="Selecione um tipo de vídeo">
           <MediaTabsListAlign>
@@ -99,6 +109,7 @@ export function MediaTabs() {
                   <MediaVideo
                     key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`}
                     tabIndex={index}
+                    onClick={() => setSelectedVideo(video)}
                   >
                     <MediaVideoThumbnail thumbnail={video.thumbnail}>
                       <MediaVideoThumbnailOverlay>
@@ -115,24 +126,26 @@ export function MediaTabs() {
 
         <Separator height="0.126rem" />
 
-        <MediaTabsPagesContainer>
-          <MediaTabsPageText>Página</MediaTabsPageText>
+        {filteredVideos.length !== 0 && (
+          <MediaTabsPagesContainer>
+            <MediaTabsPageText>Página</MediaTabsPageText>
 
-          {pagination.range.map((page, index) => {
-            if (page === 'dots') return '...'
+            {pagination.range.map((page, index) => {
+              if (page === 'dots') return '...'
 
-            return (
-              <MediaTabsPage
-                type="button"
-                key={`page-${index}`}
-                selected={pagination.active === page}
-                onClick={() => pagination.setPage(page)}
-              >
-                {page}
-              </MediaTabsPage>
-            )
-          })}
-        </MediaTabsPagesContainer>
+              return (
+                <MediaTabsPage
+                  type="button"
+                  key={`page-${index}`}
+                  selected={pagination.active === page}
+                  onClick={() => pagination.setPage(page)}
+                >
+                  {page}
+                </MediaTabsPage>
+              )
+            })}
+          </MediaTabsPagesContainer>
+        )}
       </MediaTabsRoot>
     </MediaTabsContainer>
   )
