@@ -1,5 +1,5 @@
 import * as RadixDropdown from '@radix-ui/react-dropdown-menu'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const MediaVideosFilterTriggerContainer = styled.div`
   display: flex;
@@ -64,7 +64,7 @@ export const MediaVideosFilterContent = styled(RadixDropdown.Content)<{ width: n
   z-index: 9999;
 `
 
-export const MediaVideosFilterItem = styled(RadixDropdown.Item)`
+export const MediaVideosFilterItem = styled(RadixDropdown.Item)<{ selected?: boolean }>`
   width: 100%;
 
   padding: 0.35rem 0.875rem;
@@ -83,4 +83,10 @@ export const MediaVideosFilterItem = styled(RadixDropdown.Item)`
   &:hover {
     background: ${props => props.theme.colors['brand-lighter']};
   }
+
+  ${props =>
+    props.selected &&
+    css`
+      background: ${props => props.theme.colors['brand-lighter']};
+    `}
 `

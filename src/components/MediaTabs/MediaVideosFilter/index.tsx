@@ -11,15 +11,19 @@ import {
   MediaVideosFilterTriggerContainer
 } from './styles'
 
-interface MediaVideosFilterOption {
+export interface MediaVideosFilterOption {
   label: string
   value: string
 }
 
 const OPTIONS: MediaVideosFilterOption[] = [
   {
-    value: 'recent',
+    value: 'latest',
     label: 'Data de publicação'
+  },
+  {
+    value: 'older',
+    label: 'Mais antigos'
   }
 ]
 
@@ -64,7 +68,11 @@ export function MediaVideosFilter({ onSelect }: MediaVideosFilterProps) {
       <RadixDropdown.Portal>
         <MediaVideosFilterContent width={filterWidth} sideOffset={4}>
           {OPTIONS.map(option => (
-            <MediaVideosFilterItem key={option.value} onClick={() => handleSelectOption(option)}>
+            <MediaVideosFilterItem
+              key={option.value}
+              selected={option.value === selected.value}
+              onClick={() => handleSelectOption(option)}
+            >
               {option.label}
             </MediaVideosFilterItem>
           ))}

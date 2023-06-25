@@ -17,10 +17,31 @@ import {
   MediaVideoTitle
 } from './styles'
 
+type MediaVideos = typeof media.videos
+
+const actions = {
+  latest: (data: MediaVideos) =>
+    data.sort(
+      (videoA, videoB) =>
+        Number(new Date(videoB.publishedAt).getTime()) - Number(new Date(videoA.publishedAt).getTime())
+    ),
+  older: (data: MediaVideos) =>
+    data.sort(
+      (videoA, videoB) =>
+        Number(new Date(videoA.publishedAt).getTime()) - Number(new Date(videoB.publishedAt).getTime())
+    )
+}
+
+type FilterActions = keyof typeof actions
+
 export function MediaTabs() {
   const [selectedCategory, setSelectedCategory] = useState<string>(media.categories[0].value)
 
-  const filteredVideos = media.videos.filter(video => video.category === selectedCategory)
+  const [filter, setFilter] = useState<FilterActions>('latest')
+
+  const filteredVideos = actions[filter]
+    ? actions[filter](media.videos.filter(video => video.category === selectedCategory))
+    : media.videos.filter(video => video.category === selectedCategory)
 
   function handleSelectCategory(category: string) {
     setSelectedCategory(category)
@@ -42,7 +63,7 @@ export function MediaTabs() {
             ))}
           </MediaTabsListAlign>
 
-          <MediaVideosFilter />
+          <MediaVideosFilter onSelect={option => setFilter(option.value as keyof typeof actions)} />
         </MediaTabsList>
 
         <Separator height="0.126rem" />
@@ -56,7 +77,9 @@ export function MediaTabs() {
                     <MediaVideoPlay weight="fill" size={72} />
                   </MediaVideoThumbnailOverlay>
                 </MediaVideoThumbnail>
-                <MediaVideoTitle>{video.title}</MediaVideoTitle>
+                <MediaVideoTitle>
+                  {video.title} ({video.publishedAt})
+                </MediaVideoTitle>
               </MediaVideo>
             ))}
           </MediaTabsContent>
