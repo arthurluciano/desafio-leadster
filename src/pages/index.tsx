@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Header } from '@/components/sections/Header'
 import { Hero } from '@/components/sections/Hero'
 import { Media } from '@/components/sections/Media'
+import { WhyLeadster } from '@/components/sections/WhyLeadster'
 
 export default function Landing() {
   return (
@@ -16,6 +17,7 @@ export default function Landing() {
       <Header />
       <Hero />
       <Media />
+      <WhyLeadster />
     </>
   )
 }
