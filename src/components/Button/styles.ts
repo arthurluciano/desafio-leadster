@@ -25,7 +25,7 @@ export const PrimaryButton = styled.a`
   user-select: none;
 
   &:hover {
-    background: transparent;
+    background: ${props => props.theme.colors.white};
     color: ${props => props.theme.colors.brand500};
 
     border: 1px solid ${props => props.theme.colors.brand500};

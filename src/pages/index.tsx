@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { Footer } from '@/components/sections/Footer'
 import { Header } from '@/components/sections/Header'
 import { Hero } from '@/components/sections/Hero'
 import { Media } from '@/components/sections/Media'
@@ -18,6 +19,7 @@ export default function Landing() {
       <Hero />
       <Media />
       <WhyLeadster />
+      <Footer />
     </>
   )
 }
