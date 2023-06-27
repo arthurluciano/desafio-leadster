@@ -25,6 +25,7 @@ export const theme: DefaultTheme = {
     zinc50: '#F7F8FB',
 
     gray300: '#E8EEF3',
+    gray400: '#D0DEE7',
     gray500: '#7D8A92',
 
     white: '#ffffff',

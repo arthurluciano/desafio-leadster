@@ -24,11 +24,27 @@ export const MediaTabsList = styled(RadixTabs.List)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const MediaTabsListAlign = styled.div`
   display: flex;
   align-items: center;
+
+  max-width: 24rem;
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   column-gap: 1rem;
 `
@@ -78,6 +94,14 @@ export const MediaTabsContent = styled(RadixTabs.Content)`
 
   &[data-state='inactive'] {
     display: none;
+  }
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `
 
@@ -139,6 +163,7 @@ export const MediaVideo = styled.div`
 
 export const MediaVideoThumbnail = styled.div<{ thumbnail: string }>`
   background: url('${props => props.thumbnail}');
+  background-size: cover;
 
   height: 12.75rem;
   width: 100%;
