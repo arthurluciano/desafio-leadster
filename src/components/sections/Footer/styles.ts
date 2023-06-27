@@ -26,6 +26,14 @@ export const FooterContentInfo = styled.div`
   flex-direction: column;
 
   row-gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 30rem;
+  }
+
+  @media screen and (max-width: 512px) {
+    max-width: 24rem;
+  }
 `
 
 export const FooterBrandContainer = styled.div`
@@ -48,6 +56,13 @@ export const FooterLinksMenu = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
 `
 
 export const FooterLinksMenuGroup = styled.div`
@@ -165,13 +180,21 @@ export const FooterEssentialInfo = styled.div`
 
   max-width: 72rem;
 
-  height: 4rem;
+  padding: 1.5rem;
 
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    justify-content: center;
+
+    row-gap: 0.5rem;
+  }
 `
 
 export const FooterEssentialInfoText = styled.div`
@@ -185,5 +208,9 @@ export const FooterEssentialInfoText = styled.div`
     font-weight: 600;
 
     color: ${props => props.theme.colors.brand400};
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
   }
 `

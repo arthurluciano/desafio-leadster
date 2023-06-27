@@ -6,6 +6,10 @@ export const MediaVideosFilterTriggerContainer = styled.div`
   align-items: center;
 
   column-gap: 0.5rem;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const MediaVideosFilterLabel = styled.label`
@@ -48,6 +52,10 @@ export const MediaVideosFilterPanel = styled.button`
     svg {
       transform: rotate(180deg);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex: 1;
   }
 `
 

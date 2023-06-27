@@ -31,6 +31,8 @@ export const MediaTabsList = styled(RadixTabs.List)`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+
+    row-gap: 1rem;
   }
 `
 
@@ -65,6 +67,8 @@ export const MediaTabsTrigger = styled(RadixTabs.Trigger)`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  white-space: nowrap;
 
   padding: 0.35rem 0.875rem;
 

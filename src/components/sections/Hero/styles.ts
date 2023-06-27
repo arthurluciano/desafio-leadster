@@ -10,6 +10,8 @@ export const HeroContainer = styled.section`
   justify-content: center;
 
   background: ${props => props.theme.colors.brand050};
+
+  overflow-x: hidden;
 `
 
 export const HeroContent = styled.div`
@@ -36,6 +38,10 @@ export const HeroContentTexts = styled.div`
 export const HeroContentTitle = styled.strong`
   font-size: 2.2rem;
   font-weight: 500;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 export const HeroContentHighlighted = styled.div`
@@ -52,6 +58,14 @@ export const HeroContentHighlighted = styled.div`
     right: -1.2rem;
 
     background: url('/asset-header.png');
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    &:after {
+      right: 3rem;
+    }
   }
 `
 
@@ -78,5 +92,9 @@ export const HeroContentChangeGameContainer = styled.div`
 
   > strong {
     font-weight: 800;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
   }
 `

@@ -16,6 +16,24 @@ export const WhyLeadsterContainer = styled.section`
   position: relative;
 
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    height: 54rem;
+  }
+`
+
+const float = keyframes`
+  0% { transform: translateY(0px) }
+  25% { transform: translateY(-6px) }
+  50% { transform: translateY(0px) }
+  75% { transform: translateY(6px) }
+  100% { transform: translateY(0px) }   
+`
+
+export const WhyLeadsterChart = styled(Image)`
+  animation: ${float} 3s linear infinite;
+
+  z-index: 2;
 `
 
 export const WhyLeadsterContent = styled.div`
@@ -29,9 +47,20 @@ export const WhyLeadsterContent = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   column-gap: 4rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    max-width: 24rem;
+
+    > ${WhyLeadsterChart} {
+      width: 380px;
+      height: 353px;
+    }
+  }
 `
 
 export const WhyLeadsterBackgroundSquare = styled.div`
@@ -50,20 +79,11 @@ export const WhyLeadsterBackgroundSquare = styled.div`
   transform: rotate(45deg);
 
   border-radius: 10%;
-`
 
-const float = keyframes`
-  0% { transform: translateY(0px) }
-  25% { transform: translateY(-6px) }
-  50% { transform: translateY(0px) }
-  75% { transform: translateY(6px) }
-  100% { transform: translateY(0px) }   
-`
-
-export const WhyLeadsterChart = styled(Image)`
-  animation: ${float} 3s linear infinite;
-
-  z-index: 2;
+  @media screen and (max-width: 768px) {
+    bottom: -40%;
+    left: -80%;
+  }
 `
 
 export const WhyLeadsterInfo = styled.div`
@@ -71,8 +91,6 @@ export const WhyLeadsterInfo = styled.div`
   flex-direction: column;
 
   row-gap: 1rem;
-
-  flex: 1;
 
   z-index: 2;
 `
@@ -86,6 +104,10 @@ export const WhyLeadsterTextsContainer = styled.div`
   flex: 1;
 
   max-width: 28rem;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 export const WhyLeadsterMultipleLeads = styled.h1`
@@ -124,6 +146,12 @@ export const WhyLeadsterReferredButtonsGroup = styled.div`
   column-gap: 1rem;
 
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
 `
 
 export const WhyLeadsterReferredButtonsTextsContainer = styled.div`
@@ -149,4 +177,11 @@ export const WhyLeadsterReferredButtonsSeparator = styled.div`
   width: 0.025rem;
 
   background: ${props => props.theme.colors.zinc500};
+
+  @media screen and (max-width: 768px) {
+    transform: rotate(180deg);
+
+    height: 0.005rem;
+    width: 5rem;
+  }
 `
