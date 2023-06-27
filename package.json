@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "commit": "lint-staged -v && git-cz --no-verify"
+    "commit": "vitest run && lint-staged -v && git-cz --no-verify"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
