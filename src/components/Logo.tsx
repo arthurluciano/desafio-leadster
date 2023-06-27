@@ -7,6 +7,7 @@ export function Logo() {
       height="36px"
       viewBox="0 0 1072 230"
       version="1.1"
+      role="brand-logo"
     >
       <defs>
         <linearGradient x1="0%" y1="49.9994351%" x2="99.9994544%" y2="49.9994351%" id="linearGradient-1">

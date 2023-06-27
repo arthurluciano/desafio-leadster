@@ -81,6 +81,7 @@ export function MediaTabs() {
                 key={`${category.value}-${index}`}
                 value={category.value}
                 onClick={() => handleSelectCategory(category.value)}
+                data-testid={`${category.value}-trigger`}
               >
                 {category.label}
               </MediaTabsTrigger>
@@ -110,6 +111,7 @@ export function MediaTabs() {
                     key={`${video.title.toLowerCase().split(' ').join('-')}-${index}`}
                     tabIndex={index}
                     onClick={() => setSelectedVideo(video)}
+                    data-testid={`${category.value}-video`}
                   >
                     <MediaVideoThumbnail thumbnail={video.thumbnail}>
                       <MediaVideoThumbnailOverlay>

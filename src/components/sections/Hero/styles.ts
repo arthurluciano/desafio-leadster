@@ -81,7 +81,7 @@ export const HeroContentHighlightedText = styled.strong`
   font-size: 4rem;
   font-weight: 700;
 
-  color: white;
+  color: ${props => props.theme.colors['blue-gradient'].from};
   background: linear-gradient(
     45deg,
     ${props => props.theme.colors['blue-gradient'].from},
