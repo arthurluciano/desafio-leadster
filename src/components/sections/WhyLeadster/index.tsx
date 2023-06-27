@@ -45,7 +45,7 @@ export function WhyLeadster() {
           <Separator height="0.126rem" />
 
           <WhyLeadsterButtons>
-            <Button type="button">VER DEMONSTRAÇÃO</Button>
+            <Button as="a">VER DEMONSTRAÇÃO</Button>
             <Image src="/selo_RD.png" alt="Selo RD" height={56} width={157} />
           </WhyLeadsterButtons>
 

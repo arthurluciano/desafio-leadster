@@ -20,6 +20,8 @@ export const MediaVideoDialogOverlay = styled(RadixDialog.Overlay)`
   position: fixed;
   inset: 0;
   animation: ${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  z-index: 9998;
 `
 
 export const MediaVideoDialogContent = styled(RadixDialog.Content)`
@@ -36,6 +38,8 @@ export const MediaVideoDialogContent = styled(RadixDialog.Content)`
   padding: 25;
   animation: ${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+
+  z-index: 9999;
 
   &:focus {
     outline: none;
