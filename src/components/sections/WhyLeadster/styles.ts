@@ -12,20 +12,44 @@ export const WhyLeadsterContainer = styled.section`
   justify-content: center;
 
   background: ${props => props.theme.colors.brand050};
+
+  position: relative;
+
+  overflow: hidden;
 `
 
 export const WhyLeadsterContent = styled.div`
+  height: 100%;
+
   width: 100%;
 
   max-width: 72rem;
 
-  margin: 6rem auto;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   column-gap: 4rem;
+`
+
+export const WhyLeadsterBackgroundSquare = styled.div`
+  height: 50rem;
+  width: 50rem;
+
+  background: ${props => props.theme.colors.brand100};
+
+  position: absolute;
+
+  bottom: -80%;
+  left: -2rem;
+
+  z-index: 1;
+
+  transform: rotate(45deg);
+
+  border-radius: 10%;
 `
 
 const float = keyframes`
@@ -38,6 +62,8 @@ const float = keyframes`
 
 export const WhyLeadsterChart = styled(Image)`
   animation: ${float} 3s linear infinite;
+
+  z-index: 2;
 `
 
 export const WhyLeadsterInfo = styled.div`
@@ -47,6 +73,8 @@ export const WhyLeadsterInfo = styled.div`
   row-gap: 1rem;
 
   flex: 1;
+
+  z-index: 2;
 `
 
 export const WhyLeadsterTextsContainer = styled.div`

@@ -4,6 +4,7 @@ import { Button } from '@/components/Button'
 import { Separator } from '@/components/Separator'
 
 import {
+  WhyLeadsterBackgroundSquare,
   WhyLeadsterButtons,
   WhyLeadsterChart,
   WhyLeadsterContainer,
@@ -22,6 +23,8 @@ export function WhyLeadster() {
   return (
     <WhyLeadsterContainer>
       <WhyLeadsterContent>
+        <WhyLeadsterBackgroundSquare />
+
         <WhyLeadsterChart
           src="/comparativo_img_CTA.png"
           alt="Porque usar a Leadster"
