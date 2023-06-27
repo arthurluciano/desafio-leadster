@@ -38,6 +38,18 @@ O pacote @mantine/hooks é uma biblioteca de hooks personalizados para React des
 
 [Site do Mantine](https://mantine.dev/)
 
+### Vitest
+
+O Vitest é uma biblioteca JavaScript para testes de unidade leve e simples, sem dependências externas. Ele fornece uma sintaxe concisa para escrever testes e suporta a criação de grupos de testes. É uma ótima opção para projetos que desejam uma estrutura de teste minimalista e fácil de usar.
+
+[Site do Vitest](https://vitest.dev/)
+
+### React Testing Library
+
+O pacote @testing-library/react é uma biblioteca popular usada para testes de componentes React. Ele fornece utilitários que facilitam a interação com os componentes renderizados, como buscar elementos por texto ou atributos, simular eventos e verificar comportamentos esperados. É uma abordagem centrada no usuário para testes de interface de usuário React.
+
+[Site do React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+
 ## 🧪 Ferramentas Adicionais
 
 ### Commitlint
