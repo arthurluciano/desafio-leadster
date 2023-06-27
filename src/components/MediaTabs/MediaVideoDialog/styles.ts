@@ -100,6 +100,10 @@ export const MediaVideoDialogContentYoutube = styled.iframe`
   width: 100%;
 
   border: none;
+
+  @media screen and (max-width: 768px) {
+    height: 14rem;
+  }
 `
 
 export const MediaVideoDialogContentFooter = styled.div`
@@ -109,6 +113,10 @@ export const MediaVideoDialogContentFooter = styled.div`
   row-gap: 1rem;
 
   padding: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    overflow-y: auto;
+  }
 `
 
 export const MediaVideoDialogContentModuleContainer = styled.div`
