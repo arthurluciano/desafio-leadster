@@ -38,15 +38,17 @@ export const MediaTabsListAlign = styled.div`
   display: flex;
   align-items: center;
 
-  max-width: 24rem;
-
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
   column-gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 24rem;
+
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `
 
 export const MediaTabsTrigger = styled(RadixTabs.Trigger)`
