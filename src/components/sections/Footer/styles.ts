@@ -168,9 +168,22 @@ export const FooterEssentialInfo = styled.div`
   height: 4rem;
 
   margin: 0 auto;
-`
 
-export const FooterEssentialInfoCopyright = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+`
+
+export const FooterEssentialInfoText = styled.div`
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: ${props => props.theme.colors.gray500};
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    color: ${props => props.theme.colors.brand400};
+  }
 `

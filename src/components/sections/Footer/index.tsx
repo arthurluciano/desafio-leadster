@@ -10,6 +10,7 @@ import {
   FooterContent,
   FooterContentInfo,
   FooterEssentialInfo,
+  FooterEssentialInfoText,
   FooterLinksMenu,
   FooterLinksMenuGroup,
   FooterLinksMenuGroupList,
@@ -152,7 +153,15 @@ export function Footer() {
 
         <Separator />
 
-        <FooterEssentialInfo>dd</FooterEssentialInfo>
+        <FooterEssentialInfo>
+          <FooterEssentialInfoText>
+            Copyright © 2015 - 2022 Todos os direitos reservados | <span>Leadster</span>
+          </FooterEssentialInfoText>
+
+          <FooterEssentialInfoText>
+            Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 | Termos de uso | Privacidade
+          </FooterEssentialInfoText>
+        </FooterEssentialInfo>
       </FooterContent>
     </FooterContainer>
   )
