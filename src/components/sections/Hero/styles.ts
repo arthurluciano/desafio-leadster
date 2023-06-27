@@ -67,6 +67,14 @@ export const HeroContentHighlighted = styled.div`
       right: 3rem;
     }
   }
+
+  @media screen and (max-width: 512px) {
+    text-align: center;
+
+    &:after {
+      right: 1rem;
+    }
+  }
 `
 
 export const HeroContentHighlightedText = styled.strong`

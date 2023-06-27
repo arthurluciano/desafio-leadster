@@ -160,9 +160,11 @@ export const MediaVideo = styled.div`
 
   cursor: pointer;
 
-  &:hover {
-    ${MediaVideoThumbnailOverlay} {
-      opacity: 1;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      ${MediaVideoThumbnailOverlay} {
+        opacity: 1;
+      }
     }
   }
 `

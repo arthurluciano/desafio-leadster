@@ -34,6 +34,10 @@ export const FooterContentInfo = styled.div`
   @media screen and (max-width: 512px) {
     max-width: 24rem;
   }
+
+  @media screen and (max-width: 412px) {
+    max-width: 20rem;
+  }
 `
 
 export const FooterBrandContainer = styled.div`
