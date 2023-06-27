@@ -9,7 +9,7 @@ export const MediaContainer = styled.section`
 export const MediaContent = styled.div`
   width: 100%;
 
-  max-width: 72rem;
+  max-width: 64rem;
 
   margin: 6rem auto;
 `
